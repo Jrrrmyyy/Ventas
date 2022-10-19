@@ -25,6 +25,8 @@ public class Ventas {
         // TODO code application logic here
         
      Orden orden1 = new Orden();
+     Orden orden2 = new Orden();
+     Orden orden3 = new Orden();
      
      Producto Prod1 = new Producto("Cereales", 2);
      Producto Prod2 = new Producto("Arroz", 1.12);
@@ -47,19 +49,32 @@ public class Ventas {
      
      
      
-     orden1.agregarProducto(Prod1);
-     orden1.agregarProducto(Prod2);
-     orden1.agregarProducto(Prod3);
-     orden1.agregarProducto(Prod4);
-     orden1.agregarProducto(Prod5);
-     orden1.agregarProducto(Prod6);
-     orden1.agregarProducto(Prod7);
-     orden1.agregarProducto(Prod8);
-     orden1.agregarProducto(Prod9);
-     orden1.agregarProducto(Prod10);
-     orden1.agregarProducto(Prod11);
+     orden1.agregarrProducto(Prod1);
+     orden1.agregarrProducto(Prod2);
+     orden1.agregarrProducto(Prod3);
+     orden1.agregarrProducto(Prod4);
+     orden1.agregarrProducto(Prod5);
+     orden1.agregarrProducto(Prod6);
+     orden1.agregarrProducto(Prod7);
+     orden1.agregarrProducto(Prod8);
+     orden1.agregarrProducto(Prod9);
+     orden1.agregarrProducto(Prod10);
+     orden1.agregarrProducto(Prod11);
+     
+     orden2.agregarrProducto(Prod3);
+     orden2.agregarrProducto(Prod5);
+     orden2.agregarrProducto(Prod7);
+     orden2.agregarrProducto(Prod9);
+     
+     
+     orden3.agregarrProducto(Prod1);
+     orden3.agregarrProducto(Prod2);
+     orden3.agregarrProducto(Prod3);
     
     orden1.mostrarOrden();
+    
+    orden2.mostrarOrden();
+    orden3.mostrarOrden();
         System.out.println(orden1.calcularTotal()+"$");
      
     }

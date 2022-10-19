@@ -12,8 +12,8 @@ import java.util.Scanner;
  */
 public class Orden extends Producto {
     
-    static Scanner dato = new Scanner (System.in);
-    static ArrayList<Producto> Prods = new ArrayList<>();
+  
+    private ArrayList<Producto> Prods = new ArrayList<>();
     
     private int idOrden;
     private static int cont;
@@ -23,13 +23,21 @@ public class Orden extends Producto {
         this.idOrden = ++cont;
     }
     
-    public void agregarProducto(Producto producto){
+    /*public void agregarProducto(Producto producto){
         if(maximoProd == 0){
             System.out.println("Está llena tu caja de productos");
         }else{
             maximoProd--;
             this.Prods.add(producto);
         }
+    }*/
+    
+    public void agregarrProducto(Producto producto){
+        if (Prods.size()>=maximoProd){
+            System.out.println("Tu caja está llena de productos");
+        }else
+           
+        this.Prods.add(producto);
     }
 
     public double calcularTotal(){
