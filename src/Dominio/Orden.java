@@ -2,8 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Ordenes;
-import Productos.Producto;
+package Dominio;
 import java. util. ArrayList;
 import java.util.Scanner;
 /**

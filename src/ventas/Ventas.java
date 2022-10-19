@@ -4,8 +4,8 @@
  */
 package ventas;
 
-import Productos.Producto;
-import Ordenes.Orden;
+import Dominio.*;
+import datos.*;
 
 
 /**
@@ -54,12 +54,10 @@ public class Ventas {
      orden1.agregarrProducto(Prod3);
      orden1.agregarrProducto(Prod4);
      orden1.agregarrProducto(Prod5);
-     orden1.agregarrProducto(Prod6);
-     orden1.agregarrProducto(Prod7);
      orden1.agregarrProducto(Prod8);
-     orden1.agregarrProducto(Prod9);
      orden1.agregarrProducto(Prod10);
      orden1.agregarrProducto(Prod11);
+     
      
      orden2.agregarrProducto(Prod3);
      orden2.agregarrProducto(Prod5);
@@ -71,11 +69,25 @@ public class Ventas {
      orden3.agregarrProducto(Prod2);
      orden3.agregarrProducto(Prod3);
     
-    orden1.mostrarOrden();
+        orden1.mostrarOrden();
+        orden2.mostrarOrden();
+        orden3.mostrarOrden();
     
-    orden2.mostrarOrden();
-    orden3.mostrarOrden();
         System.out.println(orden1.calcularTotal()+"$");
+        System.out.println("=====");
+        System.out.println(orden2.calcularTotal()+"$");
+        System.out.println("=====");
+        System.out.println(orden3.calcularTotal()+"$");
+        
+        
+        
+        String nombreArchivo = "ordenes.txt";
+       
+        
+        ImplAccesoDatos IAD = new ImplAccesoDatos();
+       IAD.crear(nombreArchivo);
+       IAD.escribir(nombreArchivo,  orden1);
+       IAD.leer(nombreArchivo);
      
     }
 }
