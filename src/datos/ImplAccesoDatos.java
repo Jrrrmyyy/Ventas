@@ -6,6 +6,7 @@
 package datos;
 
 import Dominio.Orden;
+import Dominio.Producto;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -65,6 +66,20 @@ public class ImplAccesoDatos implements CRUD {
                 
     }
     
+        public  void agregarStock(String nombre,Producto contenido) {
+        File archivo =new File(nombre);
+        PrintWriter salida =null;
+        try {
+            salida = new PrintWriter(new FileWriter(nombre, true));
+            salida.println(contenido);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        } finally {
+            salida.close();
+        }
+                
+    }
+    
     /*public static void leer(String nombre){
         BufferedReader entrada = null;
         File archivo =new File(nombre);
@@ -101,10 +116,11 @@ public class ImplAccesoDatos implements CRUD {
     }
 */
     public  void escribir(String nombre, Orden contenido) {
-         File archivo =new File(nombre);
+        PrintWriter salida = null;
+        File archivo =new File(nombre);
         try {
-            PrintWriter salida = new PrintWriter(archivo);
-            salida.println(contenido);
+            salida = new PrintWriter(archivo);
+            salida.print(contenido);
             System.out.println("Se ha creado el fichero");
             salida.close();
             
@@ -115,7 +131,21 @@ public class ImplAccesoDatos implements CRUD {
         }
     }
 
-   
+       public  void escribirStock(String nombre, Producto contenido) {
+        PrintWriter salida = null; 
+        File archivo =new File(nombre);
+        try {
+            salida = new PrintWriter(archivo);
+            salida.println(contenido);
+            System.out.println("Se ha creado el fichero");
+            salida.close();
+            
+        } catch (FileNotFoundException ex) {
+            
+            ex.printStackTrace(System.out);
+            
+        }
+    }
    
 
   

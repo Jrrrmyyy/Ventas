@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Alumno%20Mañana/Documents/NetBeansProjects/Ventas/src/datos/ImplAccesoDatos.java</file>
             <file>file:/C:/Users/Alumno%20Mañana/Documents/NetBeansProjects/Ventas/src/ventas/Ventas.java</file>
-            <file>file:/C:/Users/Alumno%20Mañana/Documents/NetBeansProjects/Ventas/src/Productos/Producto.java</file>
-            <file>file:/C:/Users/Alumno%20Mañana/Documents/NetBeansProjects/Ventas/src/Ordenes/Orden.java</file>
+            <file>file:/C:/Users/Alumno%20Mañana/Documents/NetBeansProjects/Ventas/src/Dominio/Orden.java</file>
+            <file>file:/C:/Users/Alumno%20Mañana/Documents/NetBeansProjects/Ventas/src/datos/CRUD.java</file>
+            <file>file:/C:/Users/Alumno%20Mañana/Documents/NetBeansProjects/Ventas/src/Dominio/Producto.java</file>
         </group>
     </open-files>
 </project-private>

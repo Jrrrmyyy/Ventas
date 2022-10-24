@@ -24,6 +24,11 @@ public class Ventas {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        ImplAccesoDatos IAD = new ImplAccesoDatos();
+        String nombreArchivo = "Stock.txt";
+        String nombreArrchivo = "ordenes.txt";
+        
+        
      Orden orden1 = new Orden();
      Orden orden2 = new Orden();
      Orden orden3 = new Orden();
@@ -68,11 +73,14 @@ public class Ventas {
      orden3.agregarrProducto(Prod1);
      orden3.agregarrProducto(Prod2);
      orden3.agregarrProducto(Prod3);
+        
     
         orden1.mostrarOrden();
         orden2.mostrarOrden();
         orden3.mostrarOrden();
     
+        System.out.println("=====");
+        
         System.out.println(orden1.calcularTotal()+"$");
         System.out.println("=====");
         System.out.println(orden2.calcularTotal()+"$");
@@ -80,15 +88,16 @@ public class Ventas {
         System.out.println(orden3.calcularTotal()+"$");
         
         
-        
-        String nombreArchivo = "ordenes.txt";
+        IAD.crear(nombreArchivo);
+        ImplAccesoDatos IAD2 = new ImplAccesoDatos();
+        IAD.escribir(nombreArchivo, orden2);
+        IAD.leer(nombreArchivo);
        
-        
-        ImplAccesoDatos IAD = new ImplAccesoDatos();
-       IAD.crear(nombreArchivo);
-       IAD.escribir(nombreArchivo,  orden1);
-       IAD.leer(nombreArchivo);
-     
+        IAD.crear(nombreArrchivo);
+        IAD.escribirStock(nombreArrchivo, Prod1);
+        IAD.leer(nombreArrchivo);
+      
+       
     }
 }
     
